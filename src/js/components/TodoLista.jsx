@@ -68,6 +68,19 @@ const TodoLista = () => {
 			.catch(err => console.error("Error al eliminar:", err));
 	};
 
+	const deleteAllTasks = () => {
+		fetch('https://playground.4geeks.com/todo/users/Zodiax37', {
+			method: 'DELETE',
+		})
+		.then(res => {
+			if (!res.ok) throw new Error("Error al eliminar el usuario");
+			return
+		})
+		.then(() => createUser()) 
+		.catch(err => console.error("Error al eliminar todo:", err));
+	};
+
+
 	return (
 		<div className="container mt-5 text-center">
 			<h1 className="mb-4">todos</h1>
@@ -86,6 +99,9 @@ const TodoLista = () => {
 						? "No tienes tareas pendientes"
 						: `${tasks.length} tarea${tasks.length > 1 ? "s" : ""} pendiente${tasks.length > 1 ? "s" : ""}`}
 				</small>
+
+				{tasks.length > 0 && (<button className="btn btn-danger m-3" onClick={deleteAllTasks}>Eliminar todas las tareas</button>)}
+
 			</div>
 		</div>
 	);
