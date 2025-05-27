@@ -9,7 +9,7 @@ import "bootstrap"
 import '../styles/index.css'
 
 // components
-import Home from './components/TodoLista';
+import TodoLista from './components/TodoLista';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
