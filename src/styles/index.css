@@ -9,3 +9,12 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.todo-item .delete-btn {
+	visibility: hidden;
+	transition: visibility 0.2s ease;
+}
+
+.todo-item:hover .delete-btn {
+	visibility: visible;
+}

@@ -76,9 +76,9 @@ const TodoLista = () => {
 
 			<div className="mt-4">
 				{tasks.map((task, index) => (
-					<div key={index} className="d-flex justify-content-between align-items-center mb-2 border p-2 rounded">
+					<div key={index} className="todo-item d-flex justify-content-between align-items-center mb-2 border p-2 rounded">
 						<span>{task.label}</span>
-						<button className="btn btn-sm btn-danger" onClick={() => deleteTasks(task.id)}>X</button>
+						<button className="delete-btn btn btn-sm btn-danger" onClick={() => deleteTasks(task.id)}>X</button>
 					</div>
 				))}
 				<small className="text-muted">
