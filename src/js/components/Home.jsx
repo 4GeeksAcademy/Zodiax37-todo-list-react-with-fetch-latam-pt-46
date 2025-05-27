@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 //create your first component
-const Home = () => {
+const TodoLista = () => {
 	const [tasks, setTasks] = useState([]);
 	const [task, setTask] = useState("");
 
@@ -91,4 +91,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default TodoLista;
